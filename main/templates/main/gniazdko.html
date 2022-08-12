@@ -1,0 +1,62 @@
+{% extends 'main/base.html' %}
+{%  block content %}
+<style>
+    *{
+        font-size: 1.5em;
+        text-align: center;
+       
+    }
+    .on{
+        background-color: green;
+        color: white;
+        padding: 28px 50px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        border-style: solid;
+        border-color: black;
+        border-width: 10px;
+    }
+    .on:hover{
+        background-color: greenyellow;
+    }
+    .off{
+        background-color: red;
+        color: white;
+        padding: 28px 50px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        border-style: solid;
+        border-color: black;
+        border-width: 10px;
+    }
+    .off:hover{
+        background-color: orange;
+    }
+    div{
+        background-color: grey;
+    }
+    h1{
+        animation: blinker is linear infinite;
+    }
+    @keyframes blinker{
+        50%{
+            opacity:0;
+        }
+    }
+    
+</style>
+<div>
+{% if socket.status %}
+<h1 style="color: green;background-color: grey;">aktualnie dziala</h1>
+{% else %}
+<h1 style="color: red;background-color: grey;">aktualnie nie dziala</h1>
+{% endif %}
+
+<a class="on" href="/Socket_1/on";background-color#f44336;color="white">on</a>
+
+<a class="off" href="/Socket_1/off">off</a>
+
+</div>
+{% endblock%}
