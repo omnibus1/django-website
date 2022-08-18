@@ -12,6 +12,7 @@ urlpatterns=[
     # path("random/",views.random,name="random"),
     path("Socket_1/on",views.on,name="on"),
     path("Socket_1/off",views.off,name="off"),
+    path("zdjecia/",views.zdjecia,name="zdjecia")
 
 ]
 urlpatterns += staticfiles_urlpatterns()

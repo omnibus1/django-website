@@ -1,10 +1,29 @@
 {% extends 'main/base.html' %}
-{%block content%}
-<br>
-<br>
-<h1>halo</h1>
-<h1>asdasd</h1>
-<h1>asdasd</h1>
 {% load static %}
-<img src="{% static 'main/media/atomowki.jpg' %}" alt="asd" />
+{%block content%}
+<style>
+    img{
+        width: 100vw;
+        height: 100vh;
+    }
+    h1{
+        
+        height: 100vh;
+        width: 100vw;
+        text-align: center;
+        color: black;
+        background-image: url( "{% static 'main/media/atomowki.jpg' %}");
+        background-size: cover;
+        display: flex;
+        justify-content:center;
+        align-items: right;
+        font-size: 4em;
+        padding-top: 0.8vh;
+    }
+</style>
+
+<h1 >tu kiedys cos bedzie</h1>
+
+
+
 {% endblock %}

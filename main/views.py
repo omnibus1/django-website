@@ -57,3 +57,5 @@ def off(response):
     socket=Outlet("bf9616a76586eba918hgs2","10.0.1.31","d1c5d8102db020f8")
     socket.turn_off()
     return render(response,"main/gniazdko.html",{"socket":socket})
+def zdjecia(response):
+    return render(response,"main/zdjecia.html",{})
